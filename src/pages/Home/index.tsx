@@ -1,14 +1,8 @@
-import { Carousel, Divider, Flex, Image, Typography } from 'antd';
+import yay from '@/assets/yay.jpg';
+import { Carousel, Divider, Flex, Typography } from 'antd';
 import styles from './index.less';
 const { Title, Paragraph, Text, Link } = Typography;
 
-const contentStyle: React.CSSProperties = {
-  height: '100vh',
-  color: '#fff',
-  lineHeight: '100vh',
-  textAlign: 'center',
-  background: '#364d79',
-};
 export default function HomePage() {
   return (
     <Typography style={{ background: '#fff', fontSize: 16 }}>
@@ -19,25 +13,32 @@ export default function HomePage() {
         draggable
         pauseOnHover={false}
         pauseOnDotsHover
-        style={{ height: '100vh', lineHeight: '100vh', overflow: 'hidden' }}
       >
         <div>
-          <img width={'100%'} src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png" />
-          {/* <h3 style={contentStyle}>1</h3> */}
+          <img width={'100%'} height={'100%'} src={yay} />
         </div>
         <div>
-          <h3 style={contentStyle}>2</h3>
+          <img
+            width={280}
+            height={280}
+            src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+          />
         </div>
         <div>
-          <h3 style={contentStyle}>3</h3>
+          <img width={'100%'} height={'100%'} src={yay} />
         </div>
         <div>
-          <h3 style={contentStyle}>4</h3>
+          <img
+            width={280}
+            height={280}
+            src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+          />
         </div>
       </Carousel>
       <Flex justify="center" className={styles.homeContainer}>
-        <Image
+        <img
           width={280}
+          height={280}
           src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
         />
         <Paragraph style={{ width: 770, marginLeft: 30 }}>

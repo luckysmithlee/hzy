@@ -18,11 +18,11 @@ const items = [
 ];
 
 export default function indexLayout() {
-  const [shownav, setShowNav] = useState(false);
+  const isHome = location.href.includes('/home');
+  const [shownav, setShowNav] = useState(!isHome);
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      const isHome = location.href.includes('/home');
       const scrollTop =
         document.documentElement.scrollTop || document.body.scrollTop;
       if (scrollTop < 10 && isHome) {
