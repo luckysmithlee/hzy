@@ -8,6 +8,9 @@ dependencies:
   antd:
     specifier: ^5.14.0
     version: 5.14.1(react-dom@18.2.0)(react@18.2.0)
+  swiper:
+    specifier: ^11.0.6
+    version: 11.0.6
   umi:
     specifier: ^4.1.1
     version: 4.1.1(@babel/core@7.23.7)(@types/react@18.2.48)(eslint@8.56.0)(prettier@3.2.4)(react-dom@18.2.0)(react@18.2.0)(stylelint@14.16.1)(typescript@5.3.3)(webpack@5.90.0)

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "antd": "^5.14.0",
+    "swiper": "^11.0.6",
     "umi": "^4.1.1"
   },
   "devDependencies": {
