@@ -2,23 +2,40 @@ import banner1 from '@/assets/banner1.jpg';
 import banner3 from '@/assets/banner3.jpg';
 import hzy from '@/assets/hzy.png';
 import { Divider, Flex, Typography } from 'antd';
-import { A11y, Autoplay, Navigation, Pagination } from 'swiper/modules';
+import {
+  A11y,
+  Autoplay,
+  Navigation,
+  Pagination,
+  Parallax,
+} from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
+import 'swiper/css/pagination';
+import 'swiper/css/parallax';
 import styles from './index.less';
 
 const { Title, Paragraph, Text, Link } = Typography;
 
 export default function HomePage() {
+  const handleTransitionStart = (swiper) => {
+    const activeSlide = swiper.slides[swiper.activeIndex];
+    activeSlide.classList.add(styles['zoom-out']);
+  };
+
+  const handleTransitionEnd = (swiper) => {
+    const activeSlide = swiper.slides[swiper.activeIndex];
+    activeSlide.classList.remove(styles['zoom-out']);
+  };
+
   return (
     <Typography style={{ background: '#fff', fontSize: 16 }}>
       <Swiper
-        modules={[Navigation, Pagination, Autoplay, A11y]}
-        spaceBetween={50}
+        modules={[Navigation, Pagination, Autoplay, A11y, Parallax]}
+        spaceBetween={100}
         slidesPerView={1}
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}
@@ -30,15 +47,26 @@ export default function HomePage() {
           disableOnInteraction: false,
         }}
         speed={1000}
+        parallax={true}
+        onSlideChangeTransitionStart={handleTransitionStart}
+        onSlideChangeTransitionEnd={handleTransitionEnd}
       >
         <SwiperSlide>
-          <img width={'100%'} src={banner1} />
+          <img
+            width={'100%'}
+            src={banner1}
+            data-swiper-parallax-scale="1.15"
+          />
         </SwiperSlide>
         <SwiperSlide>
           <img
             width={'100%'}
             src={banner3}
-            style={{ objectFit: 'cover', objectPosition: 'top' }}
+            style={{
+              objectFit: 'cover',
+              objectPosition: 'top',
+            }}
+            data-swiper-parallax-scale="1.15"
           />
         </SwiperSlide>
       </Swiper>
