@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@ant-design/icons':
+    specifier: ^5.3.0
+    version: 5.3.0(react-dom@18.2.0)(react@18.2.0)
   antd:
     specifier: ^5.14.0
     version: 5.14.1(react-dom@18.2.0)(react@18.2.0)
@@ -22,6 +25,9 @@ devDependencies:
   '@types/react-dom':
     specifier: ^18.2.18
     version: 18.2.18
+  '@types/swiper':
+    specifier: ^6.0.0
+    version: 6.0.0
   typescript:
     specifier: ^5.3.3
     version: 5.3.3
@@ -1684,6 +1690,13 @@ packages:
   /@types/semver@7.5.6:
     resolution: {integrity: sha512-dn1l8LaMea/IjDoHNd9J52uBbInB796CDffS6VdIxvqYCPSG0V0DzHp76GpaWnlhg88uYyPbXCDIowa86ybd5A==}
     dev: false
+
+  /@types/swiper@6.0.0:
+    resolution: {integrity: sha512-QPZRgxZ+ivXXtzV43B3LxpXUIC7FE/EoKM+rtxngmgt2M7eeUYypZhyqZD8UxJtlBcUDw/ATGoVeSNpvBBrz2w==}
+    deprecated: This is a stub types definition. swiper provides its own type definitions, so you do not need this installed.
+    dependencies:
+      swiper: 11.0.6
+    dev: true
 
   /@types/yargs-parser@21.0.3:
     resolution: {integrity: sha512-I4q9QU9MQv4oEOz4tAHJtNz1cwuLxn2F3xcc2iV5WdqLPpUnj30aUuxt1mAxYTG+oe8CZMV/+6rU4S4gRDzqtQ==}
@@ -7944,7 +7957,6 @@ packages:
   /swiper@11.0.6:
     resolution: {integrity: sha512-W/Me7MQl5rNgdM5x9i3Gll76WsyVpnHn91GhBOyL7RCFUeg62aVnflzlVfIpXzZ/87FtJOfAoDH79ZH2Yq76zA==}
     engines: {node: '>= 4.7.0'}
-    dev: false
 
   /synckit@0.8.5:
     resolution: {integrity: sha512-L1dapNV6vu2s/4Sputv8xGsCdAVlb5nRDMFU/E27D44l5U6cw1g0dGd45uLc+OXjNMmF4ntiMdCimzcjFKQI8Q==}
