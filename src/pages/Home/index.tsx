@@ -37,6 +37,7 @@ export default function HomePage() {
   return (
     <Typography style={{ background: '#fff', fontSize: 16 }}>
       <Swiper
+        className={styles.swiper}
         modules={[Navigation, Pagination, Autoplay, A11y, Parallax]}
         // spaceBetween={100}
         slidesPerView={1}
@@ -55,18 +56,10 @@ export default function HomePage() {
         onSlideChangeTransitionEnd={handleTransitionEnd}
       >
         <SwiperSlide>
-          <img width={'100%'} src={banner1} data-swiper-parallax-scale="1.15" />
+          <img src={banner1} />
         </SwiperSlide>
         <SwiperSlide>
-          <img
-            width={'100%'}
-            src={banner3}
-            style={{
-              objectFit: 'cover',
-              objectPosition: 'top',
-            }}
-            data-swiper-parallax-scale="1.15"
-          />
+          <img src={banner3} />
         </SwiperSlide>
       </Swiper>
       <Flex
