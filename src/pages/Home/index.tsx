@@ -89,7 +89,7 @@ export default function HomePage() {
           >
             韩智勇
           </Title>
-          <div style={{ color: '#999', marginTop: 5, fontSize: 16 }}>
+          <div style={{ color: '#999', marginTop: 5, fontSize: 16, wordBreak: 'keep-all', textAlign: 'center'  }}>
             工学博士 地质工程与地质资源博士后 教授 博士生导师
           </div>
           <div style={{ color: '#808080', marginTop: 5, fontSize: 16 }}>
