@@ -49,6 +49,7 @@ export default function indexLayout() {
   const onMenuSelect = ({ key }: { key: string }) => {
     key === 'home' ? setShowNav(false) : setShowNav(true);
     history.push(key);
+    showMenu && setShowMenu(false);
   };
 
   return (
@@ -73,6 +74,7 @@ export default function indexLayout() {
           className={styles.menu}
           onClick={onMenuSelect}
           selectable={false}
+          hidden={isMobile && !showMenu}
         />
       </Header>
       <Content
