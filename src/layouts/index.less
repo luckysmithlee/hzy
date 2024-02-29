@@ -39,6 +39,14 @@ body {
   }
 }
 @media screen and (max-width: 767px) {
+  @keyframes slideInOut {
+  from {
+    transform: translateY(-100%); /* 从上方划入，偏移整个高度 */
+  }
+  to {
+    transform: translateY(0%); /* 划出到初始位置 */
+  }
+}
   .header {
     padding: 0;
     padding-left: 18px;
@@ -57,10 +65,8 @@ body {
       position: absolute;
       top: 64px;
       left: 0;
-      background: #f7f7f7;
-      span{
-        color: #333
-      }
+      background: #001529;
+      animation: slideInOut 0.5s ease-in-out;
     }
   }
 }

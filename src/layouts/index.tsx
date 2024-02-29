@@ -11,7 +11,7 @@ const items = [
   { key: 'research_direction', label: '研究方向' },
   { key: 'achievements&papers', label: '成果及论文' },
   { key: 'members', label: '组员介绍' },
-  { key: 'news', label: '课题组新闻' },
+  { key: 'news', label: '组内要闻' },
   { key: 'activity', label: '组内活动' },
   { key: 'contact_us', label: '联系我们' },
   // { key: 'research_resources', label: '科研资源' },
