@@ -157,6 +157,7 @@ export default function HomePage() {
           <a className={styles.text}>更多 {'>'}</a>
         </Title>
         <Divider style={{ margin: '10px 0 20px' }}></Divider>
+        <List></List>
       </div>
 
       <div className={styles.homeContainer}>
