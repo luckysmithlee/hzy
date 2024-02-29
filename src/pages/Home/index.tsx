@@ -10,7 +10,7 @@ import {
   Parallax,
 } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { useOutletContext } from 'umi';
+import { history, useOutletContext } from 'umi';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -119,7 +119,12 @@ export default function HomePage() {
       <div className={styles.homeContainer}>
         <Title level={4} className={styles.contentTitle}>
           研究方向
-          <a className={styles.text}>更多 {'>'}</a>
+          <a
+            className={styles.text}
+            onClick={() => history.push('/research_direction')}
+          >
+            更多 {'>'}
+          </a>
         </Title>
         <Divider style={{ margin: '10px 0 20px' }}></Divider>
         <div>（一）固体废物管理与资源化处理</div>
@@ -145,7 +150,9 @@ export default function HomePage() {
       <div className={styles.homeContainer}>
         <Title level={4} className={styles.contentTitle}>
           组内要闻
-          <a className={styles.text}>更多 {'>'}</a>
+          <a className={styles.text} onClick={() => history.push('/news')}>
+            更多 {'>'}
+          </a>
         </Title>
         <Divider style={{ margin: '10px 0 20px' }}></Divider>
         <List></List>
@@ -154,7 +161,9 @@ export default function HomePage() {
       <div className={styles.homeContainer}>
         <Title level={4} className={styles.contentTitle}>
           组内活动
-          <a className={styles.text}>更多 {'>'}</a>
+          <a className={styles.text} onClick={() => history.push('/activity')}>
+            更多 {'>'}
+          </a>
         </Title>
         <Divider style={{ margin: '10px 0 20px' }}></Divider>
         <List></List>
